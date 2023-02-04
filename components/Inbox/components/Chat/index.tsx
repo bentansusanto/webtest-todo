@@ -8,7 +8,7 @@ interface ChatProps {
 
 const Chat : React.FC<ChatProps> = ({chatIcon, taskIcon}) => {
   return (
-    <div className={`${chatIcon ? "block" : "hidden"} ${taskIcon? "hidden" : "block"}`}>
+    <div className={`${chatIcon != taskIcon ? "block" : "hidden"}`}>
         <Search/>
     </div>
   )
